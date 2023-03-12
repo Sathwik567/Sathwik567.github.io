@@ -1,87 +1,197 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>My Profile</title>
+    <title>Bootstrap demo</title>
+    <style>
+    .na2{
+      background-color: #4b0082;
+    }
+    .na3{
+      background-color: #f18973;
+    }
+    .na5{
+      background-color: #92a8d1;
+    }
+    .t1{
+      color:white;
+    }
+    .footer{
+  background: #152F4F;
+  color:white;
+
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  }
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);}
+}
+    .wrapper{display: flex;justify-content: center;align-items: center;height: 100vh;background:#000}
+    .profile{position: relative;width: 400px;height: 400px;background:url("images/me.jpg");background-size: cover;cursor: pointer;border: 12px;border-top-right-radius: 35px !important;border-radius: 6px}
+    .overlay{width: 100%;height: 100%;background:rgba(0,0,0,0.8);border-radius: 12px;cursor: pointer;opacity: 0;transition: all 1s;border-top-right-radius: 35px !important;border-radius: 6px}
+    .profile:hover .overlay{opacity: 1}.social-icons{display: flex;list-style: none;bottom: 10px;position: absolute;text-align: center;justify-content: center;left: 22px}
+    .social-icons li{width: 25px;height: 25px;border: 1px solid #eee;padding: 20px;margin-right: 30px;display: flex;justify-content: center;align-items: center;color: #fff;border-radius: 5px;transition: all 1s}
+    .social-icons li:hover{background:#fff;color: #000}.overlay .about{position: relative;justify-content: center;align-items: center;display: flex;top:40%;color: #fff;flex: column}
+    </style>
   </head>
   <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    <table>
-      <tr>
-        <td>
-          <img
-           src="images/sa.jpg"
-           alt="Profile Pic">
-        </td>
-   <td>
-    <h1>P.SATHWIK VENKATA GOWTHAM </h1>
-    <p><em>Student at <strong><a href="https://www.amrita.edu/campus/amritapuri/">Amrita Vishwa Vidyapeetham</a></strong></em></p>
-    <p>Highly motivated Artificial Intelligence enthusiast. Proficient in machine learning, python programming. A person who possesses problem solving skills and is adaptable to any situation. Seeking opportunities to apply my skills and knowledge to real-world projects and make a positive impact in the field.</p>
-  </td>
-  </tr>
-  </table>
-    <hr size="3">
-    <h2><center><u>Personal Information</u></center></h2><br>
-    <table>
-      <tr>
-        <th>Name</th>
-        <td>: </td>
-        <td>P.Sathwik Venkata Gowtham</td>
-      </tr>
-      <tr>
-        <th>Age</th>
-        <td>:</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <th>Branch</th>
-        <td>:</td>
-        <td>Computer Science and Engineering(Artifical Intelligence)</td>
-      </tr>
-      <tr>
-        <th>College</th>
-        <td>:</td>
-        <td>Amrita Vishwa Vidyapeetham,Amritapuri</td>
-      </tr>
-      <tr>
-        <th>Place</th>
-        <td>:</td>
-        <td>Buchireddypalem,Nellore,Andhra Pradesh</td>
-      </tr>
-    </table>
-    <br>
-    <h2><center><u>Education</u></center></h2><br>
-    <br>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="tab" href="#home">Info</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#menu1">B.Tech</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#menu2">Higher Secondary</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#menu3">Secondary</a>
-      </li>
-    </ul>
-    </nav>
+<div class="row">
+  <div class="col-4">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="list-item-1">Item 1</h4>
+      <p>The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it.The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it.</p>
+      <h4 id="list-item-2">Item 2</h4>
+      <p>The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it.The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it.</p>
+      <h4 id="list-item-3">Item 3</h4>
+      <p>.The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it...The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it.</p>
+      <h4 id="list-item-4">Item 4</h4>
+      <p>.The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it.The bridge spanning a 100-foot gully stood in front of him as the last obstacle blocking him from reaching his destination. While people may have called it a "bridge", the reality was it was nothing more than splintered wooden planks held together by rotting ropes. It was questionable whether it would hold the weight of a child, let alone the weight of a grown man. The problem was there was no other way across the gully, and this played into his calculations of whether or not it was worth the risk of trying to cross it...</p>
+    </div>
+  </div>
+</div>-->
 
-    <!-- Tab panes -->
+<!--
+<div class="row">
+  <div class="col-4">
+    <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+      <a class="p-1 rounded" href="#simple-list-item-1">Item 1</a>
+      <a class="p-1 rounded" href="#simple-list-item-2">Item 2</a>
+      <a class="p-1 rounded" href="#simple-list-item-3">Item 3</a>
+      <a class="p-1 rounded" href="#simple-list-item-4">Item 4</a>
+      <a class="p-1 rounded" href="#simple-list-item-5">Item 5</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="simple-list-item-1">Item 1</h4>
+      <p>...The briit was worth the risk of trying to cross it</p>
+      <h4 id="simple-list-item-2">Item 2</h4>
+      <p>..The bridge s it was worth the risk of trying to cross it.</p>
+      <h4 id="simple-list-item-3">Item 3</h4>
+      <p>..The bridge  risk of trying to cross it.</p>
+      <h4 id="simple-list-item-4">Item 4</h4>
+      <p>..The bri it was worth the risk of trying to cross it.</p>
+      <h4 id="simple-list-item-5">Item 5</h4>
+      <p>The bridge t was worth the risk of trying to cross it...</p>
+    </div>
+  </div>
+</div>-->
+<nav id="navbar-example2" class="navbar fixed-top bg-dark" data-bs-theme="dark" data-bs-spy="scroll">
+  <a class="navbar-brand" href="#" style="color: white">SATHWIK</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading1">About Me</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Education</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading3">Academic Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading4">Skills</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading5">Interests</a>
+    </li>
+  </ul>
+</nav>
+
+<div data-bs-target="#navbar-example2" tabindex="0">
+  <h4 id="scrollspyHeading1"></h4>
+  <center><p>Hello!</p></center>
+  <div class="wrapper">
+          <div class="profile">
+              <div class="overlay">
+                  <div class="about d-flex flex-column">
+                      <h4>Ponnuru Sathwik Venkata Gowtham</h4> <span>AI Student</span>
+                  </div>
+                  <ul class="social-icons">
+                      <li><a href="https://www.facebook.com/profile.php?id=100006358336402" class="fa fa-facebook" target="_blank"></a></li>
+                      <li><a href="https://www.linkedin.com/in/sathwik-gowtham-237419213/" class="fa fa-linkedin" target="_blank"></a></li>
+                      <li><a href="https://github.com/Sathwik567" class="fa fa-github" target="_blank"></a></li>
+                      <li><a href="https://www.instagram.com/sathwik._.610/" class="fa fa-instagram" target="_blank"></a></li>
+                  </ul>
+              </div>
+          </div>
+          </div>
+      <p><em>Student at <strong><a href="https://www.amrita.edu/campus/amritapuri/">Amrita Vishwa Vidyapeetham</a></strong></em></p>
+      <p>Highly motivated Artificial Intelligence enthusiast. Proficient in machine learning, python programming. A person who possesses problem solving skills and is adaptable to any situation. Seeking opportunities to apply my skills and knowledge to real-world projects and make a positive impact in the field.</p>
+  <!--
+  <table>
+    <tr>
+      <td>
+        <img
+         src="C:\Users\sathw\OneDrive\Desktop\WCD\sa.jpg"
+         alt="Profile Pic">
+      </td>
+ <td>
+  <h1>P.SATHWIK VENKATA GOWTHAM </h1>
+  <p><em>Student at <strong><a href="https://www.amrita.edu/campus/amritapuri/">Amrita Vishwa Vidyapeetham</a></strong></em></p>
+  <p>Highly motivated Artificial Intelligence enthusiast. Proficient in machine learning, python programming. A person who possesses problem solving skills and is adaptable to any situation. Seeking opportunities to apply my skills and knowledge to real-world projects and make a positive impact in the field.</p>
+</td>
+</tr>
+</table>
+    <center><img src="C:\Users\sathw\OneDrive\Desktop\me.jpeg" alt="Profile Pic"></center>
+     <h1 style="color:white">P.SATHWIK VENKATA GOWTHAM </h1>
+     <p style="color:white"><em>Student at <strong><a href="https://www.amrita.edu/campus/amritapuri/">Amrita Vishwa Vidyapeetham</a></strong></em></p>
+     <p style="color:white">Highly motivated Artificial Intelligence enthusiast. Proficient in machine learning, python programming. A person who possesses problem solving skills and is adaptable to any situation. Seeking opportunities to apply my skills and knowledge to real-world projects and make a positive impact in the field.</p>
+-->
+  <!--Education-->
+  <!--
+<h4 id="scrollspyHeading2"><u>Education</u></h4>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+      <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+    </ul>
+
     <div class="tab-content">
-      <div id="home" class="container tab-pane active"><br>
-      <p>These are my education details like where I had studied and how much I scored.</p>
+      <div id="home" class="tab-pane fade in active">
+        <p>These are my education details like where I had studied and how much I scored.</p>
       </div>
-      <div id="menu1" class="container tab-pane fade"><br>
-        <center><img src="amrita1.jpg" alt="Amrita Vishwa Vidyapeetham">
+      <div id="menu1" class="tab-pane fade">
         <h3>Amrita Vishwa Vidyapeetham</h3>
         <p>Amritapuri,Kollam</p></center>
         <ul>
@@ -89,8 +199,7 @@
         <li><p><strong><u>CGPA</u>: </strong>8.43/10</p></li>
         </ul>
       </div>
-      <div id="menu2" class="container tab-pane fade"><br>
-        <center><img src="nkiit.jpg" alt="Narayana Junior College">
+      <div id="menu2" class="tab-pane fade">
         <h3>Narayana Junior College</h3>
         <p>Nellore,Andhra Pradesh</p></center>
         <ul>
@@ -98,140 +207,329 @@
         <li><p><u><strong>CGPA:</strong></u>9.75/10</p></li>
         </ul>
       </div>
-      <div id="menu3" class="container tab-pane fade"><br>
-        <center><img src="nabuchi.jpg" alt="Narayana High School">
+      <div id="menu3" class="tab-pane fade">
         <h3>Narayana High School</h3>
         <p>BuchiReddyPalem,Andhra Pradesh</p></center>
         <ul>
         <li><p>SSC</p></li>
         <li><p><strong>CGPA:</strong>10/10</p></li>
         </ul>
+    </div>
+  </div>
+-->
+      <h4 id="scrollspyHeading2"></h4>
+      <div class="na2"{
+      <br><br><br>
+      <nav class="navbar" style="background-color: #e3f2fd;">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#home">Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#menu1">B.Tech</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#menu2">Higher Secondary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#menu3">Secondary</a>
+        </li>
+      </ul>
+      </nav>
+
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+          <p style="color:white">These are my education details like where I had studied and how much I scored.</p>
+          <center><img src="images/edu.jpg" alt="Education"></center><br>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+          <center><img src="images/amrita.jpg" alt="Amrita Vishwa Vidyapeetham">
+          <h3 style="color:white">Amrita Vishwa Vidyapeetham</h3>
+          <p style="color:white">Amritapuri,Kollam</p></center>
+          <ul style="color:white">
+          <li><p>CSE-Artificial Intelligence</p></li>
+          <li><p><strong><u>CGPA</u>: </strong>8.43/10</p></li>
+          </ul>
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+          <center><img src="images/nkiit.jpg" alt="Narayana Junior College">
+          <h3 style="color:white">Narayana Junior College</h3>
+          <p style="color:white">Nellore,Andhra Pradesh</p></center>
+          <ul style="color:white">
+          <li><p>MPC</p></li>
+          <li><p><u><strong>CGPA:</strong></u>9.75/10</p></li>
+          </ul>
+        </div>
+        <div id="menu3" class="container tab-pane fade"><br>
+          <center><img src="images/nabuchi.jpg" alt="Narayana High School">
+          <h3 style="color:white">Narayana High School</h3>
+          <p style="color:white">BuchiReddyPalem,Andhra Pradesh</p></center>
+          <ul style="color:white">
+          <li><p>SSC</p></li>
+          <li><p><strong>CGPA:</strong>10/10</p></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <hr size="3">
-    <h2><center><u>Projects</u></center></h2><br>
-    <br>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+  <br>
+  <!--Projects-->
+  <div class="na3">
+  <h3 id="scrollspyHeading3"></h3>
+  <br><br>
+    <div class="accordion" id="ae">
+      <div class="card">
+        <h2 class="card-header" id="he1">
+            <button class="collapsed accordion-button bg-info" type="button" data-toggle="collapse" data-target="#c1" aria-expanded="false" aria-controls="c1">
             <p><b>Robotics Project</b></p>
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
+        <div id="c1" class="collapse" aria-labelledby="he1" data-parent="#ae">
+          <div class="card-body">
             <p><strong>Path Planning Robot using Raspberry pi</strong></p>
-            <p>When given a path as an input, the robot takes the input and moves in such a way that it
-    makes a shape resembling that particular shape. The movement of the robot is based on Motor
-    Driver which is implemented in Python.</p>
-    </div>
+            <p>When given a path as an input, the robot takes the input and moves in such a way that it makes a shape resembling that particular shape. The movement of the robot is based on Motor Driver which is implemented in Python.</p>
+          </div>
         </div>
       </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <div class="card">
+        <h2 class="card-header" id="he2">
+          <button class="collapsed accordion-button bg-info" type="button" data-toggle="collapse" data-target="#c2" aria-expanded="false" aria-controls="c2">
             <p><b>Mathematical Project</b></p>
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
+        <div id="c2" class="accordion-collapse collapse" aria-labelledby="he2" data-parent="#ae">
+          <div class="card-body">
             <strong>Image Fusion</strong>
-            <p>The goal of the project is to integrate multiple photos into a single image while keeping
-    significant aspects using the method Discrete Wavelet Transform</p>
+            <p>The goal of the project is to integrate multiple photos into a single image while keeping significant aspects using the method Discrete Wavelet Transform</p>
           </div>
         </div>
       </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <div class="card">
+        <h2 class="card-header" id="he3">
+            <button class="collapsed accordion-button bg-info" type="button" data-toggle="collapse" data-target="#c3" aria-expanded="false" aria-controls="c3">
             <p><b>Network Based Project</b></p>
           </button>
         </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
+        <div id="c3" class="collapse" aria-labelledby="he3" data-parent="#ae">
+          <div class="card-body">
             <strong>Tic-Tac-Toe with Socket Programming</strong>
-            <p>Led a team of 3 members. Created a interface for two players to play the game by connecting
-    to common server. Used Python Programming for designing and implementing the project.</p>
+            <p>Led a team of 3 members. Created a interface for two players to play the game by connecting to common server. Used Python Programming for designing and implementing the project.</p>
           </div>
         </div>
       </div>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <div class="card">
+        <h2 class="card-header" id="he4">
+            <button class="collapsed accordion-button bg-info" type="button" data-toggle="collapse" data-target="#c4" aria-expanded="false" aria-controls="c4">
             <p><b>Student Social Responsibility</b></p>
           </button>
         </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>Conducted an awareness session on cyber crimes and cyber security measures for high school students.</p>
+        <div id="c4" class="collapse" aria-labelledby="he4" data-parent="#ae">
+          <div class="card-body">
+            Conducted an awareness session on cyber crimes and cyber security measures for high school students.
           </div>
         </div>
       </div>
-
-    </div>
-    <br>
-    <hr>
-    <h2><center><u>Skills</u></center></h2><br>
-    <br/>
-    <button class="btn btn-primary" type="submit">Python</button>
-    &nbsp;
-    <button type="button" class="btn btn-outline-primary">Java</button>
-    &nbsp;
-    <button class="btn btn-primary" type="submit">SQL</button>
-    &nbsp;
-    <button type="button" class="btn btn-outline-primary">SPARK</button>
-    &nbsp;
-    <button class="btn btn-primary" type="submit">Hadoop</button>
-    &nbsp;
-    <button type="button" class="btn btn-outline-primary">HTML</button>
-    &nbsp;
-    <button class="btn btn-primary" type="submit">MATLAB</button>
-    &nbsp;
-    <br>
-    <hr>
-
-    <div class="row">
-      <div class="col-4">
-        <div id="list" class="list-group">
-          <a class="list-group-item list-group-item-action" href="#l1">Item 1</a>
-          <a class="list-group-item list-group-item-action" href="#l2">Item 2</a>
-          <a class="list-group-item list-group-item-action" href="#l3">Item 3</a>
-          <a class="list-group-item list-group-item-action" href="#l4">Item 4</a>
         </div>
-      </div>
-      <div class="col-8">
-        <div data-bs-spy="scroll" data-bs-target="#list" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-          <h4 id="l1">Item 1</h4>
-          <p>During the first part of your life, you only become aware of happiness once you have lost it. Then an age comes, a second one, in which you already know, at the moment when you begin to experience true happiness, that you are, at the end of the day, going to lose it. When I met Belle, I understood that I had just entered this second age. I also understood that I hadn’t reached the third age, in which anticipation of the loss of happiness prevents you from living.</p>
-          <h4 id="l2">Item 2</h4>
-          <p>During the first part of your life, you only become aware of happiness once you have lost it. Then an age comes, a second one, in which you already know, at the moment when you begin to experience true happiness, that you are, at the end of the day, going to lose it. When I met Belle, I understood that I had just entered this second age. I also understood that I hadn’t reached the third age, in which anticipation of the loss of happiness prevents you from living.</p>
-          <h4 id="l3">Item 3</h4>
-          <p>During the first part of your life, you only become aware of happiness once you have lost it. Then an age comes, a second one, in which you already know, at the moment when you begin to experience true happiness, that you are, at the end of the day, going to lose it. When I met Belle, I understood that I had just entered this second age. I also understood that I hadn’t reached the third age, in which anticipation of the loss of happiness prevents you from living.</p>
-          <h4 id="l4">Item 4</h4>
-          <p>During the first part of your life, you only become aware of happiness once you have lost it. Then an age comes, a second one, in which you already know, at the moment when you begin to experience true happiness, that you are, at the end of the day, going to lose it. When I met Belle, I understood that I had just entered this second age. I also understood that I hadn’t reached the third age, in which anticipation of the loss of happiness prevents you from living.</p>
-        </div>
-      </div>
+
+      <h3><center><em><u>Web Develpoment Projects</u></em></center></h3>
+      <table cellpadding="70">
+        <tr>
+          <td>
+            <div class="card" style="width: 18rem;">
+              <img src="C:\Users\sathw\OneDrive\Desktop\WCD\wordle.jpg" class="card-img-top" alt="Web Development">
+              <div class="card-body">
+                <center>
+                <h5 class="card-title">Wordle Clone</h5>
+                <a href="https://github.com/Sathwik567/Sathwik567.github.io/tree/main/Wordle" class="btn btn-primary btn-sm" target="_blank">Explore</a></center>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="card" style="width: 18rem;">
+              <img src="C:\Users\sathw\OneDrive\Desktop\WCD\pa.jpg" class="card-img-top" alt="Machine Learning">
+              <div class="card-body">
+                <center>
+                <h5 class="card-title">Photo Album</h5>
+                <a href="https://github.com/Sathwik567/Sathwik567.github.io/tree/main/Photo-Album" class="btn btn-primary btn-sm" target="_blank">Explore</a>
+              </center>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="card" style="width: 18rem;">
+              <img src="C:\Users\sathw\OneDrive\Desktop\WCD\ttt.jpg" class="card-img-top" alt="Block Chain">
+              <div class="card-body">
+                <center>
+                <h5 class="card-title">Tic-Tac-Toe</h5>
+                <a href="https://github.com/Sathwik567/Sathwik567.github.io/tree/main/Tic-Tac-Toe" class="btn btn-primary btn-sm" target="_blank">Explore</a>
+              </center>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
 
+  <!--
+  <h3 id="scrollspyHeading3">Academic Projects</h3>
+  <div class="accordion" id="ae">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="he1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+          <p><b>Robotics Project</b></p>
+        </button>
+      </h2>
+      <div id="c1" class="accordion-collapse collapse" aria-labelledby="he1" data-parent="#ae">
+        <div class="accordion-body">
+          <p><strong>Path Planning Robot using Raspberry pi</strong></p>
+          <p>When given a path as an input, the robot takes the input and moves in such a way that it makes a shape resembling that particular shape. The movement of the robot is based on Motor Driver which is implemented in Python.</p>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#cw" aria-expanded="false" aria-controls="cw">
-    For Connections
-  </button>
-</p>
-<div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="cw">
-    <div class="card card-body" style="width: 300px;">
-      <ul>
-      <li><p>9391857943</p></li>
-      <li><p>sathwikgowtham567@gmail.com</p></li>
-      <li><p><a href="https://github.com/Sathwik567" target="_blank"><span style="color:blue">Github</span></a></p></li>
-      <li><p><a href="https://www.linkedin.com/in/sathwik-gowtham-237419213/" target="_blank"><span style="color:blue">LinkedIn</span></a></p></li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="he2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+          <p><b>Mathematical Project</b></p>
+        </button>
+      </h2>
+      <div id="c2" class="accordion-collapse collapse" aria-labelledby="he2" data-parent="#ae">
+        <div class="accordion-body">
+          <strong>Image Fusion</strong>
+          <p>The goal of the project is to integrate multiple photos into a single image while keeping significant aspects using the method Discrete Wavelet Transform</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="he3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+          <p><b>Network Based Project</b></p>
+        </button>
+      </h2>
+      <div id="c3" class="accordion-collapse collapse" aria-labelledby="he3" data-parent="#ae">
+        <div class="accordion-body">
+          <strong>Tic-Tac-Toe with Socket Programming</strong>
+          <p>Led a team of 3 members. Created a interface for two players to play the game by connecting to common server. Used Python Programming for designing and implementing the project.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="he4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+          <p><b>Student Social Responsibility</b></p>
+        </button>
+      </h2>
+      <div id="c4" class="accordion-collapse collapse" aria-labelledby="he4" data-parent="#ae">
+        <div class="accordion-body">
+          <p>Conducted an awareness session on cyber crimes and cyber security measures for high school students.</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+-->
+  <br>
+  <h4 id="scrollspyHeading4"><u>Skills</u></h4><br>
+  <table cellspacing="10" cellpadding="15">
+    <tr>
+      <td><button class="btn btn-primary" type="submit">Python</button></td>
+      <td>⭐⭐⭐⭐</td>
+      <td><button type="button" class="btn btn-outline-primary">Java</button></td>
+      <td>⭐⭐⭐</td>
+      <td><button class="btn btn-primary" type="submit">SQL</button></td>
+      <td>⭐⭐⭐⭐</td>
+    </tr>
+    <tr>
+      <td><button type="button" class="btn btn-outline-primary">HTML</button></td>
+      <td>⭐⭐⭐</td>
+      <td><button class="btn btn-primary" type="submit">MATLAB</button></td>
+      <td>⭐⭐⭐</td>
+      <td>
+      <button type="button" class="btn btn-outline-primary">MongoDB</button></td>
+      <td>⭐⭐⭐</td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-primary" type="submit">Spark</button></td>
+      <td>⭐⭐⭐⭐</td>
+      <td><button type="button" class="btn btn-outline-primary">Hadoop</button></td>
+      <td>⭐⭐⭐</td>
+    </tr>
+
+  </table>
+  <!--
+  <button class="btn btn-primary" type="submit">Python</button>
+  <button type="button" class="btn btn-outline-primary">Java</button>
+  <button class="btn btn-primary" type="submit">SQL</button>
+  <button type="button" class="btn btn-outline-primary">SPARK</button>
+  <button class="btn btn-primary" type="submit">Hadoop</button>
+  <button type="button" class="btn btn-outline-primary">HTML</button>
+  <button class="btn btn-primary" type="submit">MATLAB</button>
+  <button type="button" class="btn btn-outline-primary">MongoDB</button>-->
+  <!--Interests-->
+  <div class="na5">
+    <br>
+  <h4 id="scrollspyHeading5"></h4>
+  <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+        <center><img src="C:\Users\sathw\OneDrive\Desktop\web.jpg" class="d-block w-50" alt="Web Developer"></center>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Web Development</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <center><img src="C:\Users\sathw\OneDrive\Desktop\bc.jpg" class="d-block w-50" alt="Block Chain"></center>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Block Chain</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <center><img src="C:\Users\sathw\OneDrive\Desktop\ml.jpg" class="d-block w-50" alt="Machine Learning"></center>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color:black">Machine Learning</h5>
+        </div>
+      </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+      <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+    </div>
+    <hr>
+    <div class="mt-5 pt-5 pb-5 footer">
+      <div class="container">
+        <center>
+    <table cellpadding="10">
+     <tr>
+           <td><a href="https://www.facebook.com/profile.php?id=100006358336402" class="fa fa-facebook" target="_blank"></a></td>
+           <td><a href="https://www.linkedin.com/in/sathwik-gowtham-237419213/" class="fa fa-linkedin" target="_blank"></a></td>
+           <td><a href="https://github.com/Sathwik567" class="fa fa-github" target="_blank"></a></td>
+           <td><a href="https://www.instagram.com/sathwik._.610/" class="fa fa-instagram" target="_blank"></a></td>
+       </tr>
+        <tr>
+                <center><h4 class="mt-lg-0 mt-sm-4"><u>Location</u></h4></center>
+                <p>Nellore,Andhra Pradesh</p>
+                <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+91)-9391857943</p>
+                <p><i class="fa fa-envelope-o mr-3"></i>sathwikgowtham567@gmail.com</p>
+              </div>
+            </div>
+        </tr>
+   </table>
+ </center>
+
+
+    </div>
   </body>
-  </html>
+</html>
